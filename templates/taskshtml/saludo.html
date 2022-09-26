@@ -1,4 +1,13 @@
 <h1>Inicio</h1>
 
+<!--login-->
+<div >
+   {% if user.username %}
+     Hola {{user.username}} &nbsp; &nbsp; <a href="{% url 'cerrar_sesion' %}" style="color: rgb(50, 26, 206)74, 28, 28);">Cerrar Sesión</a>
+   {% else %}
+   <a href="{% url 'logear'%}" style="color: rgb(50, 26, 206)74, 28, 28);">Login</a>&nbsp; &nbsp; <a href="{% url 'registro' %}" style="color:  rgb(50, 26, 206)74, 28, 28);">Registrate</a>
+   {% endif %}
+ </div>
+
  <h2>{{title}}</h2> 
    

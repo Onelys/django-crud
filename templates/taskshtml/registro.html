@@ -1,0 +1,12 @@
+<h1>Signup</h1>
+<form  method="post">
+   {% csrf_token %}
+   {% if messages %}
+        {% for mensaje in messages %} 
+            <span class="alert alert-{{mensaje.tags}}"> {{mensaje}} </span>          
+        {% endfor %} 
+        {% endif %}
+   {{form.as_p}}
+   <button>Signup</button>
+</form>
+

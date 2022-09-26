@@ -1,0 +1,20 @@
+<form method="post">
+
+    {% csrf_token %}
+
+    <div style="width: 75%; margin: auto;">
+
+        {% if messages %}
+        {% for mensaje in messages %} 
+            <span class="alert alert-{{mensaje.tags}}"> {{mensaje}} </span>          
+        {% endfor %} 
+        {% endif %}
+
+        <br/><br/>
+        {{form.as_p }}
+        
+        <button type="submit" class="btn btn-succes" style="background-color: rgb(19, 240, 19);">Login</button>
+        
+     </div>
+</form>
+

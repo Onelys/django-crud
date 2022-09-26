@@ -1,8 +1,10 @@
 from django.contrib import admin
 from django.urls import path
-from . import views
+from .views import registro, cerrarSesion, logear, inicio
 
 urlpatterns = [
-    path('',views.home, name='inicio' ),
-    path('signup/',views.signup, name='signup' ),
+    path('', inicio, name='inicio' ),
+    path('registro/', registro.as_view(), name='registro' ),
+    path('cerrar_sesion/', cerrarSesion, name="cerrar_sesion"),
+    path('logear/', logear, name="logear"),
 ]
